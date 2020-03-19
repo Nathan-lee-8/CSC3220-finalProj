@@ -20,7 +20,14 @@ private slots:
 
     void on_previousButton_clicked();
 
+    void on_nextButton_clicked();
+
+    void on_addClassButton_clicked();
+
+    void on_removeClassButton_clicked();
+
 private:
     Ui::MainWindow *ui;
+    unsigned int classCount = 3;
 };
 #endif // MAINWINDOW_H

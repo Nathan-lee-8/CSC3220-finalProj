@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.12.6
+** Created by: Qt User Interface Compiler version 5.12.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -20,7 +20,6 @@
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
-#include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
 
@@ -33,10 +32,21 @@ public:
     QStackedWidget *stackedWidget;
     QWidget *homePage;
     QPushButton *nextButton;
-    QTextEdit *textEdit;
     QLabel *greetingLabel;
+    QLabel *infoLabel;
     QLabel *label;
-    QTextBrowser *textBrowser;
+    QLineEdit *courseOne;
+    QLabel *course1Label;
+    QLabel *course2Label;
+    QLabel *course3Label;
+    QLineEdit *courseTwo;
+    QLineEdit *courseThree;
+    QLabel *course4Label;
+    QLineEdit *courseFour;
+    QPushButton *addClassButton;
+    QLabel *course5Label;
+    QLineEdit *courseFive;
+    QPushButton *removeClassButton;
     QWidget *calendarView;
     QCalendarWidget *calendarWidget;
     QLineEdit *dateLabel;
@@ -60,27 +70,61 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         stackedWidget = new QStackedWidget(centralwidget);
         stackedWidget->setObjectName(QString::fromUtf8("stackedWidget"));
-        stackedWidget->setGeometry(QRect(0, 10, 841, 521));
+        stackedWidget->setGeometry(QRect(10, 10, 841, 521));
         homePage = new QWidget();
         homePage->setObjectName(QString::fromUtf8("homePage"));
         nextButton = new QPushButton(homePage);
         nextButton->setObjectName(QString::fromUtf8("nextButton"));
         nextButton->setGeometry(QRect(612, 451, 161, 41));
-        textEdit = new QTextEdit(homePage);
-        textEdit->setObjectName(QString::fromUtf8("textEdit"));
-        textEdit->setGeometry(QRect(160, 80, 521, 74));
         greetingLabel = new QLabel(homePage);
         greetingLabel->setObjectName(QString::fromUtf8("greetingLabel"));
         greetingLabel->setGeometry(QRect(280, 10, 311, 81));
         QFont font;
         font.setPointSize(18);
         greetingLabel->setFont(font);
+        infoLabel = new QLabel(homePage);
+        infoLabel->setObjectName(QString::fromUtf8("infoLabel"));
+        infoLabel->setGeometry(QRect(150, 70, 531, 91));
+        infoLabel->setTextFormat(Qt::AutoText);
         label = new QLabel(homePage);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(150, 210, 461, 101));
-        textBrowser = new QTextBrowser(homePage);
-        textBrowser->setObjectName(QString::fromUtf8("textBrowser"));
-        textBrowser->setGeometry(QRect(180, 290, 256, 192));
+        label->setGeometry(QRect(120, 200, 401, 31));
+        courseOne = new QLineEdit(homePage);
+        courseOne->setObjectName(QString::fromUtf8("courseOne"));
+        courseOne->setGeometry(QRect(210, 240, 141, 21));
+        course1Label = new QLabel(homePage);
+        course1Label->setObjectName(QString::fromUtf8("course1Label"));
+        course1Label->setGeometry(QRect(120, 240, 101, 21));
+        course2Label = new QLabel(homePage);
+        course2Label->setObjectName(QString::fromUtf8("course2Label"));
+        course2Label->setGeometry(QRect(120, 280, 101, 21));
+        course3Label = new QLabel(homePage);
+        course3Label->setObjectName(QString::fromUtf8("course3Label"));
+        course3Label->setGeometry(QRect(120, 320, 101, 21));
+        courseTwo = new QLineEdit(homePage);
+        courseTwo->setObjectName(QString::fromUtf8("courseTwo"));
+        courseTwo->setGeometry(QRect(210, 280, 141, 21));
+        courseThree = new QLineEdit(homePage);
+        courseThree->setObjectName(QString::fromUtf8("courseThree"));
+        courseThree->setGeometry(QRect(210, 320, 141, 21));
+        course4Label = new QLabel(homePage);
+        course4Label->setObjectName(QString::fromUtf8("course4Label"));
+        course4Label->setGeometry(QRect(120, 360, 101, 21));
+        courseFour = new QLineEdit(homePage);
+        courseFour->setObjectName(QString::fromUtf8("courseFour"));
+        courseFour->setGeometry(QRect(210, 360, 141, 21));
+        addClassButton = new QPushButton(homePage);
+        addClassButton->setObjectName(QString::fromUtf8("addClassButton"));
+        addClassButton->setGeometry(QRect(110, 440, 93, 28));
+        course5Label = new QLabel(homePage);
+        course5Label->setObjectName(QString::fromUtf8("course5Label"));
+        course5Label->setGeometry(QRect(120, 400, 101, 21));
+        courseFive = new QLineEdit(homePage);
+        courseFive->setObjectName(QString::fromUtf8("courseFive"));
+        courseFive->setGeometry(QRect(210, 400, 141, 21));
+        removeClassButton = new QPushButton(homePage);
+        removeClassButton->setObjectName(QString::fromUtf8("removeClassButton"));
+        removeClassButton->setGeometry(QRect(260, 440, 93, 28));
         stackedWidget->addWidget(homePage);
         calendarView = new QWidget();
         calendarView->setObjectName(QString::fromUtf8("calendarView"));
@@ -121,7 +165,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 863, 22));
+        menubar->setGeometry(QRect(0, 0, 863, 26));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -129,7 +173,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(0);
         tabWidget->setCurrentIndex(1);
 
 
@@ -140,29 +184,32 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
         nextButton->setText(QApplication::translate("MainWindow", "Next", nullptr));
-        textEdit->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'.SF NS Text'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'.SF NS Text';\">This application is for students by students. Our goal is to create a well-organized planner/calendar application that will satisfy the needs of students and allow for more consolidated information storage. </span></p></body></html>", nullptr));
         greetingLabel->setText(QApplication::translate("MainWindow", "Welcome to Our Planner Application!", nullptr));
-        label->setText(QApplication::translate("MainWindow", "This application is for students by students. Our goal is to create a well-organized planner/calendar application that will satisfy the needs of students and allow for more consolidated information storage. ", nullptr));
+        infoLabel->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\">This application is for students by students. Our goal is to create a well-<br/>organized planner/calendar application that will satisfy the needs of students<br/>and allow for more consolidated information storage. </p><p align=\"center\">Please enter the appropriate infromation below to get started.</p></body></html>", nullptr));
+        label->setText(QApplication::translate("MainWindow", "Please enter the name of your courses:", nullptr));
+        course1Label->setText(QApplication::translate("MainWindow", "Course 1:", nullptr));
+        course2Label->setText(QApplication::translate("MainWindow", "Course 2:", nullptr));
+        course3Label->setText(QApplication::translate("MainWindow", "Course 3:", nullptr));
+        course4Label->setText(QApplication::translate("MainWindow", "Course 4:", nullptr));
+        addClassButton->setText(QApplication::translate("MainWindow", "Add Class", nullptr));
+        course5Label->setText(QApplication::translate("MainWindow", "Course 5:", nullptr));
+        removeClassButton->setText(QApplication::translate("MainWindow", "Remove Class", nullptr));
         previousButton->setText(QApplication::translate("MainWindow", "Prev", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(byDueDate), QApplication::translate("MainWindow", "Due Date", nullptr));
         classTwoLabel->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'.SF NS Text'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'.SF NS Text'; font-size:18pt;\">CSC 3220</span></p></body></html>", nullptr));
         classThreeLabel->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'.SF NS Text'; font-size:18pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:18pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'.SF NS Text';\">CSC 3150</span></p></body></html>", nullptr));
         classOneLabel->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'.SF NS Text'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'.SF NS Text'; font-size:18pt;\">CSC 3760</span></p></body></html>", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(byClass), QApplication::translate("MainWindow", "Class", nullptr));
     } // retranslateUi
