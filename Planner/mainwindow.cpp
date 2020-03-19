@@ -37,6 +37,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_calendarWidget_clicked(const QDate &date)
 {
+    ui->calendarList->setText(" ");
     qDebug() << date;
     QString newDate = date.toString();
     ui->dateLabel->setText(newDate);
