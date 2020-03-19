@@ -30,6 +30,10 @@ private slots:
 
     void setTime();
 
+    void on_previousButton_2_clicked();
+
+    void on_addNote5_clicked();
+
 private:
     Ui::MainWindow *ui;
     QTimer *timer;

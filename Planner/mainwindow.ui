@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="homePage">
      <widget class="QPushButton" name="nextButton">
@@ -382,6 +382,19 @@
        <string>:</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="previousButton_2">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>380</y>
+        <width>113</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Next</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tableView">
      <widget class="QTabWidget" name="tabWidget">
@@ -405,60 +418,217 @@
        <attribute name="title">
         <string>Class</string>
        </attribute>
-       <widget class="QTextEdit" name="classTwoLabel">
+       <widget class="QTextBrowser" name="classOneLabel">
         <property name="geometry">
          <rect>
-          <x>310</x>
-          <y>40</y>
-          <width>101</width>
-          <height>31</height>
+          <x>10</x>
+          <y>80</y>
+          <width>151</width>
+          <height>41</height>
          </rect>
-        </property>
-        <property name="html">
-         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'.SF NS Text'; font-size:18pt;&quot;&gt;CSC 3220&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
-       <widget class="QTextEdit" name="classThreeLabel">
+       <widget class="QTextBrowser" name="classTwoLabel">
         <property name="geometry">
          <rect>
-          <x>510</x>
-          <y>40</y>
-          <width>91</width>
-          <height>31</height>
+          <x>180</x>
+          <y>80</y>
+          <width>151</width>
+          <height>41</height>
          </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>18</pointsize>
-         </font>
-        </property>
-        <property name="html">
-         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:18pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'.SF NS Text';&quot;&gt;CSC 3150&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
-       <widget class="QTextEdit" name="classOneLabel">
+       <widget class="QTextBrowser" name="classThreeLabel">
         <property name="geometry">
          <rect>
-          <x>110</x>
-          <y>40</y>
-          <width>101</width>
-          <height>31</height>
+          <x>350</x>
+          <y>80</y>
+          <width>151</width>
+          <height>41</height>
          </rect>
         </property>
-        <property name="html">
-         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'.SF NS Text'; font-size:18pt;&quot;&gt;CSC 3760&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </widget>
+       <widget class="QTextBrowser" name="classFiveLabel">
+        <property name="geometry">
+         <rect>
+          <x>680</x>
+          <y>80</y>
+          <width>151</width>
+          <height>41</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QTextBrowser" name="classFourLabel">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>80</y>
+          <width>151</width>
+          <height>41</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="addNote5">
+        <property name="geometry">
+         <rect>
+          <x>710</x>
+          <y>430</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Back</string>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="class1Note1">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>130</y>
+          <width>151</width>
+          <height>91</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="class2Note1">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>130</y>
+          <width>151</width>
+          <height>91</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="class3Note1">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>130</y>
+          <width>151</width>
+          <height>91</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="class4Note1">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>130</y>
+          <width>151</width>
+          <height>91</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="class5Note1">
+        <property name="geometry">
+         <rect>
+          <x>680</x>
+          <y>130</y>
+          <width>151</width>
+          <height>91</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="class1Note2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>230</y>
+          <width>151</width>
+          <height>91</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="class5Note2">
+        <property name="geometry">
+         <rect>
+          <x>680</x>
+          <y>230</y>
+          <width>151</width>
+          <height>91</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="class4Note2">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>230</y>
+          <width>151</width>
+          <height>91</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="class2Note2">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>230</y>
+          <width>151</width>
+          <height>91</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="class3Note2">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>230</y>
+          <width>151</width>
+          <height>91</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="class1Note3">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>330</y>
+          <width>151</width>
+          <height>91</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="class2Note3">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>330</y>
+          <width>151</width>
+          <height>91</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="class3Note3">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>330</y>
+          <width>151</width>
+          <height>91</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="class4Note3">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>330</y>
+          <width>151</width>
+          <height>91</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="class5Note3">
+        <property name="geometry">
+         <rect>
+          <x>680</x>
+          <y>330</y>
+          <width>151</width>
+          <height>91</height>
+         </rect>
         </property>
        </widget>
       </widget>

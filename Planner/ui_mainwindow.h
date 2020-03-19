@@ -21,6 +21,7 @@
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
+#include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
 
@@ -57,13 +58,32 @@ public:
     QLCDNumber *minuteValue;
     QLabel *dots;
     QLabel *otherDots;
+    QPushButton *previousButton_2;
     QWidget *tableView;
     QTabWidget *tabWidget;
     QWidget *byDueDate;
     QWidget *byClass;
-    QTextEdit *classTwoLabel;
-    QTextEdit *classThreeLabel;
-    QTextEdit *classOneLabel;
+    QTextBrowser *classOneLabel;
+    QTextBrowser *classTwoLabel;
+    QTextBrowser *classThreeLabel;
+    QTextBrowser *classFiveLabel;
+    QTextBrowser *classFourLabel;
+    QPushButton *addNote5;
+    QTextEdit *class1Note1;
+    QTextEdit *class2Note1;
+    QTextEdit *class3Note1;
+    QTextEdit *class4Note1;
+    QTextEdit *class5Note1;
+    QTextEdit *class1Note2;
+    QTextEdit *class5Note2;
+    QTextEdit *class4Note2;
+    QTextEdit *class2Note2;
+    QTextEdit *class3Note2;
+    QTextEdit *class1Note3;
+    QTextEdit *class2Note3;
+    QTextEdit *class3Note3;
+    QTextEdit *class4Note3;
+    QTextEdit *class5Note3;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -179,6 +199,9 @@ public:
         otherDots->setObjectName(QString::fromUtf8("otherDots"));
         otherDots->setGeometry(QRect(750, 460, 56, 41));
         otherDots->setFont(font2);
+        previousButton_2 = new QPushButton(calendarView);
+        previousButton_2->setObjectName(QString::fromUtf8("previousButton_2"));
+        previousButton_2->setGeometry(QRect(670, 380, 113, 32));
         stackedWidget->addWidget(calendarView);
         tableView = new QWidget();
         tableView->setObjectName(QString::fromUtf8("tableView"));
@@ -190,16 +213,69 @@ public:
         tabWidget->addTab(byDueDate, QString());
         byClass = new QWidget();
         byClass->setObjectName(QString::fromUtf8("byClass"));
-        classTwoLabel = new QTextEdit(byClass);
-        classTwoLabel->setObjectName(QString::fromUtf8("classTwoLabel"));
-        classTwoLabel->setGeometry(QRect(310, 40, 101, 31));
-        classThreeLabel = new QTextEdit(byClass);
-        classThreeLabel->setObjectName(QString::fromUtf8("classThreeLabel"));
-        classThreeLabel->setGeometry(QRect(510, 40, 91, 31));
-        classThreeLabel->setFont(font);
-        classOneLabel = new QTextEdit(byClass);
+        classOneLabel = new QTextBrowser(byClass);
         classOneLabel->setObjectName(QString::fromUtf8("classOneLabel"));
-        classOneLabel->setGeometry(QRect(110, 40, 101, 31));
+        classOneLabel->setGeometry(QRect(10, 80, 151, 41));
+        classTwoLabel = new QTextBrowser(byClass);
+        classTwoLabel->setObjectName(QString::fromUtf8("classTwoLabel"));
+        classTwoLabel->setGeometry(QRect(180, 80, 151, 41));
+        classThreeLabel = new QTextBrowser(byClass);
+        classThreeLabel->setObjectName(QString::fromUtf8("classThreeLabel"));
+        classThreeLabel->setGeometry(QRect(350, 80, 151, 41));
+        classFiveLabel = new QTextBrowser(byClass);
+        classFiveLabel->setObjectName(QString::fromUtf8("classFiveLabel"));
+        classFiveLabel->setGeometry(QRect(680, 80, 151, 41));
+        classFourLabel = new QTextBrowser(byClass);
+        classFourLabel->setObjectName(QString::fromUtf8("classFourLabel"));
+        classFourLabel->setGeometry(QRect(520, 80, 151, 41));
+        addNote5 = new QPushButton(byClass);
+        addNote5->setObjectName(QString::fromUtf8("addNote5"));
+        addNote5->setGeometry(QRect(710, 430, 93, 28));
+        class1Note1 = new QTextEdit(byClass);
+        class1Note1->setObjectName(QString::fromUtf8("class1Note1"));
+        class1Note1->setGeometry(QRect(10, 130, 151, 91));
+        class2Note1 = new QTextEdit(byClass);
+        class2Note1->setObjectName(QString::fromUtf8("class2Note1"));
+        class2Note1->setGeometry(QRect(180, 130, 151, 91));
+        class3Note1 = new QTextEdit(byClass);
+        class3Note1->setObjectName(QString::fromUtf8("class3Note1"));
+        class3Note1->setGeometry(QRect(350, 130, 151, 91));
+        class4Note1 = new QTextEdit(byClass);
+        class4Note1->setObjectName(QString::fromUtf8("class4Note1"));
+        class4Note1->setGeometry(QRect(520, 130, 151, 91));
+        class5Note1 = new QTextEdit(byClass);
+        class5Note1->setObjectName(QString::fromUtf8("class5Note1"));
+        class5Note1->setGeometry(QRect(680, 130, 151, 91));
+        class1Note2 = new QTextEdit(byClass);
+        class1Note2->setObjectName(QString::fromUtf8("class1Note2"));
+        class1Note2->setGeometry(QRect(10, 230, 151, 91));
+        class5Note2 = new QTextEdit(byClass);
+        class5Note2->setObjectName(QString::fromUtf8("class5Note2"));
+        class5Note2->setGeometry(QRect(680, 230, 151, 91));
+        class4Note2 = new QTextEdit(byClass);
+        class4Note2->setObjectName(QString::fromUtf8("class4Note2"));
+        class4Note2->setGeometry(QRect(520, 230, 151, 91));
+        class2Note2 = new QTextEdit(byClass);
+        class2Note2->setObjectName(QString::fromUtf8("class2Note2"));
+        class2Note2->setGeometry(QRect(180, 230, 151, 91));
+        class3Note2 = new QTextEdit(byClass);
+        class3Note2->setObjectName(QString::fromUtf8("class3Note2"));
+        class3Note2->setGeometry(QRect(350, 230, 151, 91));
+        class1Note3 = new QTextEdit(byClass);
+        class1Note3->setObjectName(QString::fromUtf8("class1Note3"));
+        class1Note3->setGeometry(QRect(10, 330, 151, 91));
+        class2Note3 = new QTextEdit(byClass);
+        class2Note3->setObjectName(QString::fromUtf8("class2Note3"));
+        class2Note3->setGeometry(QRect(180, 330, 151, 91));
+        class3Note3 = new QTextEdit(byClass);
+        class3Note3->setObjectName(QString::fromUtf8("class3Note3"));
+        class3Note3->setGeometry(QRect(350, 330, 151, 91));
+        class4Note3 = new QTextEdit(byClass);
+        class4Note3->setObjectName(QString::fromUtf8("class4Note3"));
+        class4Note3->setGeometry(QRect(520, 330, 151, 91));
+        class5Note3 = new QTextEdit(byClass);
+        class5Note3->setObjectName(QString::fromUtf8("class5Note3"));
+        class5Note3->setGeometry(QRect(680, 330, 151, 91));
         tabWidget->addTab(byClass, QString());
         stackedWidget->addWidget(tableView);
         MainWindow->setCentralWidget(centralwidget);
@@ -213,7 +289,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(2);
         tabWidget->setCurrentIndex(1);
 
 
@@ -237,22 +313,9 @@ public:
         previousButton->setText(QApplication::translate("MainWindow", "Prev", nullptr));
         dots->setText(QApplication::translate("MainWindow", ":", nullptr));
         otherDots->setText(QApplication::translate("MainWindow", ":", nullptr));
+        previousButton_2->setText(QApplication::translate("MainWindow", "Next", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(byDueDate), QApplication::translate("MainWindow", "Due Date", nullptr));
-        classTwoLabel->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'.SF NS Text'; font-size:18pt;\">CSC 3220</span></p></body></html>", nullptr));
-        classThreeLabel->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:18pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'.SF NS Text';\">CSC 3150</span></p></body></html>", nullptr));
-        classOneLabel->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'.SF NS Text'; font-size:18pt;\">CSC 3760</span></p></body></html>", nullptr));
+        addNote5->setText(QApplication::translate("MainWindow", "Back", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(byClass), QApplication::translate("MainWindow", "Class", nullptr));
     } // retranslateUi
 

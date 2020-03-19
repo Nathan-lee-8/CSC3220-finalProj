@@ -17,6 +17,15 @@ MainWindow::MainWindow(QWidget *parent)
     ui->course4Label->hide();
     ui->courseFive->hide();
     ui->course5Label->hide();
+    ui->classFourLabel->hide();
+    ui->class4Note1->hide();
+    ui->class4Note2->hide();
+    ui->class4Note3->hide();
+    ui->classFiveLabel->hide();
+    ui->class5Note1->hide();
+    ui->class5Note2->hide();
+    ui->class5Note3->hide();
+
 }
 
 MainWindow::~MainWindow()
@@ -51,21 +60,37 @@ void MainWindow::on_addClassButton_clicked()
     case 1:
         ui->courseTwo->show();
         ui->course2Label->show();
+        ui->classTwoLabel->show();
+        ui->class2Note1->show();
+        ui->class2Note2->show();
+        ui->class2Note3->show();
         classCount++;
         break;
     case 2:
         ui->courseThree->show();
         ui->course3Label->show();
+        ui->classThreeLabel->show();
+        ui->class3Note1->show();
+        ui->class3Note2->show();
+        ui->class3Note3->show();
         classCount++;
         break;
     case 3:
         ui->courseFour->show();
         ui->course4Label->show();
+        ui->classFourLabel->show();
+        ui->class4Note1->show();
+        ui->class4Note2->show();
+        ui->class4Note3->show();
         classCount++;
         break;
     case 4:
         ui->courseFive->show();
         ui->course5Label->show();
+        ui->classFiveLabel->show();
+        ui->class5Note1->show();
+        ui->class5Note2->show();
+        ui->class5Note3->show();
         classCount++;
         break;
     }
@@ -79,21 +104,37 @@ void MainWindow::on_removeClassButton_clicked()
     case 2:
         ui->courseTwo->hide();
         ui->course2Label->hide();
+        ui->classTwoLabel->hide();
+        ui->class2Note1->hide();
+        ui->class2Note2->hide();
+        ui->class2Note3->hide();
         classCount--;
         break;
     case 3:
         ui->courseThree->hide();
         ui->course3Label->hide();
+        ui->classThreeLabel->hide();
+        ui->class3Note1->hide();
+        ui->class3Note2->hide();
+        ui->class3Note3->hide();
         classCount--;
         break;
     case 4:
         ui->courseFour->hide();
         ui->course4Label->hide();
+        ui->classFourLabel->hide();
+        ui->class4Note1->hide();
+        ui->class4Note2->hide();
+        ui->class4Note3->hide();
         classCount--;
         break;
     case 5:
         ui->courseFive->hide();
         ui->course5Label->hide();
+        ui->classFiveLabel->hide();
+        ui->class5Note1->hide();
+        ui->class5Note2->hide();
+        ui->class5Note3->hide();
         classCount--;
         break;
     }
@@ -119,4 +160,14 @@ void MainWindow::setTime()
         ui->dots->show();
         ui->otherDots->show();
     }
+}
+
+void MainWindow::on_previousButton_2_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+}
+
+void MainWindow::on_addNote5_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
 }
