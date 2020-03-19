@@ -38,8 +38,20 @@ private slots:
     void on_addOne_clicked();
 
 
+    void on_addTwo_clicked();
+
+    void on_addThree_clicked();
+
+    void on_addFour_clicked();
+
+    void on_addFive_clicked();
+
 private:
-    QLinkedList<QString> list;
+    QStringList list1;
+    QStringList list2;
+    QStringList list3;
+    QStringList list4;
+    QStringList list5;
     Ui::MainWindow *ui;
     QTimer *timer;
     unsigned int classCount = 3;

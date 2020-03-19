@@ -153,6 +153,60 @@ void MainWindow::on_addNote5_clicked()
 
 void MainWindow::on_addOne_clicked()
 {
-    list.append(ui->assignmentOne->toPlainText());
-    list.append(ui->dateOne->toPlainText());
+    list1.append(ui->assignmentOne->toPlainText());
+    list1.append(ui->dateOne->toPlainText());
+    QString full;
+    for(int i =0;i<list1.length();i+=2){
+        qDebug() << i ;
+        full += "*" + list1.at(i) + "\nDate: " + list1.at(i+1) + "\n";
+    }
+    ui->class1Note1->setText(full);
+}
+
+void MainWindow::on_addTwo_clicked()
+{
+    list2.append(ui->assignmentTwo->toPlainText());
+    list2.append(ui->dateTwo->toPlainText());
+    QString full;
+    for(int i =0;i<list2.length();i+=2){
+        qDebug() << i ;
+        full += "*" + list2.at(i) + "\nDate: " + list2.at(i+1) + "\n";
+    }
+    ui->class2Note1->setText(full);
+}
+
+void MainWindow::on_addThree_clicked()
+{
+    list3.append(ui->assignmentThree->toPlainText());
+    list3.append(ui->dateThree->toPlainText());
+    QString full;
+    for(int i =0;i<list3.length();i+=2){
+        qDebug() << i ;
+        full += "*" + list3.at(i) + "\nDate: " + list3.at(i+1) + "\n";
+    }
+    ui->class3Note1->setText(full);
+}
+
+void MainWindow::on_addFour_clicked()
+{
+    list4.append(ui->assignmentFour->toPlainText());
+    list4.append(ui->dateFour->toPlainText());
+    QString full;
+    for(int i =0;i<list4.length();i+=2){
+        qDebug() << i ;
+        full += "*" + list4.at(i) + "\nDate: " + list4.at(i+1) + "\n";
+    }
+    ui->class4Note1->setText(full);
+}
+
+void MainWindow::on_addFive_clicked()
+{
+    list5.append(ui->assignmentFive->toPlainText());
+    list5.append(ui->dateFive->toPlainText());
+    QString full;
+    for(int i =0;i<list5.length();i+=2){
+        qDebug() << i ;
+        full += "*" + list5.at(i) + "\nDate: " + list5.at(i+1) + "\n";
+    }
+    ui->class5Note1->setText(full);
 }
