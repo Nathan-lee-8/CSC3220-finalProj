@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "mainwindow.h"
+#include "../Planner/mainwindow.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
     QByteArrayData data[12];
-    char stringdata0[211];
+    char stringdata0[220];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -40,17 +40,17 @@ QT_MOC_LITERAL(5, 69, 21), // "on_nextButton_clicked"
 QT_MOC_LITERAL(6, 91, 25), // "on_addClassButton_clicked"
 QT_MOC_LITERAL(7, 117, 28), // "on_removeClassButton_clicked"
 QT_MOC_LITERAL(8, 146, 7), // "setTime"
-QT_MOC_LITERAL(9, 154, 19), // "on_addNote5_clicked"
-QT_MOC_LITERAL(10, 174, 17), // "on_addOne_clicked"
-QT_MOC_LITERAL(11, 192, 18) // "on_toPage3_clicked"
+QT_MOC_LITERAL(9, 154, 27), // "on_previousButton_2_clicked"
+QT_MOC_LITERAL(10, 182, 19), // "on_addNote5_clicked"
+QT_MOC_LITERAL(11, 202, 17) // "on_addOne_clicked"
 
     },
     "MainWindow\0on_calendarWidget_clicked\0"
     "\0date\0on_previousButton_clicked\0"
     "on_nextButton_clicked\0on_addClassButton_clicked\0"
     "on_removeClassButton_clicked\0setTime\0"
-    "on_addNote5_clicked\0on_addOne_clicked\0"
-    "on_toPage3_clicked"
+    "on_previousButton_2_clicked\0"
+    "on_addNote5_clicked\0on_addOne_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -104,9 +104,9 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 3: _t->on_addClassButton_clicked(); break;
         case 4: _t->on_removeClassButton_clicked(); break;
         case 5: _t->setTime(); break;
-        case 6: _t->on_addNote5_clicked(); break;
-        case 7: _t->on_addOne_clicked(); break;
-        case 8: _t->on_toPage3_clicked(); break;
+        case 6: _t->on_previousButton_2_clicked(); break;
+        case 7: _t->on_addNote5_clicked(); break;
+        case 8: _t->on_addOne_clicked(); break;
         default: ;
         }
     }

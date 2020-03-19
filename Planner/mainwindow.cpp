@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <qDebug>
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -21,6 +21,12 @@ MainWindow::MainWindow(QWidget *parent)
     ui->class4Note1->hide();
     ui->classFiveLabel->hide();
     ui->class5Note1->hide();
+    ui->assignmentFour->hide();
+    ui->assignmentFive->hide();
+    ui->dateFour->hide();
+    ui->dateFive->hide();
+    ui->addFour->hide();
+    ui->addFive->hide();
 }
 
 MainWindow::~MainWindow()
@@ -37,16 +43,18 @@ void MainWindow::on_calendarWidget_clicked(const QDate &date)
 
 void MainWindow::on_previousButton_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(0);
+    ui->stackedWidget->setCurrentIndex(2);
 }
 
 
 void MainWindow::on_nextButton_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(1);
+    ui->stackedWidget->setCurrentIndex(2);
     ui->classOneLabel->setText(ui->courseOne->text());
     ui->classTwoLabel->setText(ui->courseTwo->text());
     ui->classThreeLabel->setText(ui->courseThree->text());
+    ui->classFourLabel->setText(ui->courseFour->text());
+    ui->classFiveLabel->setText(ui->courseFive->text());
 }
 
 void MainWindow::on_addClassButton_clicked()
@@ -57,6 +65,9 @@ void MainWindow::on_addClassButton_clicked()
         ui->course2Label->show();
         ui->classTwoLabel->show();
         ui->class2Note1->show();
+        ui->addTwo->show();
+        ui->assignmentTwo->show();
+        ui->dateTwo->show();
         classCount++;
         break;
     case 2:
@@ -64,6 +75,9 @@ void MainWindow::on_addClassButton_clicked()
         ui->course3Label->show();
         ui->classThreeLabel->show();
         ui->class3Note1->show();
+        ui->addThree->show();
+        ui->assignmentThree->show();
+        ui->dateThree->show();
         classCount++;
         break;
     case 3:
@@ -71,6 +85,9 @@ void MainWindow::on_addClassButton_clicked()
         ui->course4Label->show();
         ui->classFourLabel->show();
         ui->class4Note1->show();
+        ui->addFour->show();
+        ui->assignmentFour->show();
+        ui->dateFour->show();
         classCount++;
         break;
     case 4:
@@ -78,6 +95,9 @@ void MainWindow::on_addClassButton_clicked()
         ui->course5Label->show();
         ui->classFiveLabel->show();
         ui->class5Note1->show();
+        ui->addFive->show();
+        ui->assignmentFive->show();
+        ui->dateFive->show();
         classCount++;
         break;
     }
@@ -93,6 +113,9 @@ void MainWindow::on_removeClassButton_clicked()
         ui->course2Label->hide();
         ui->classTwoLabel->hide();
         ui->class2Note1->hide();
+        ui->addTwo->hide();
+        ui->assignmentTwo->hide();
+        ui->dateTwo->hide();
         classCount--;
         break;
     case 3:
@@ -100,6 +123,9 @@ void MainWindow::on_removeClassButton_clicked()
         ui->course3Label->hide();
         ui->classThreeLabel->hide();
         ui->class3Note1->hide();
+        ui->addThree->hide();
+        ui->assignmentThree->hide();
+        ui->dateThree->hide();
         classCount--;
         break;
     case 4:
@@ -107,6 +133,9 @@ void MainWindow::on_removeClassButton_clicked()
         ui->course4Label->hide();
         ui->classFourLabel->hide();
         ui->class4Note1->hide();
+        ui->addFour->hide();
+        ui->assignmentFour->hide();
+        ui->dateFour->hide();
         classCount--;
         break;
     case 5:
@@ -114,6 +143,9 @@ void MainWindow::on_removeClassButton_clicked()
         ui->course5Label->hide();
         ui->classFiveLabel->hide();
         ui->class5Note1->hide();
+        ui->addFive->hide();
+        ui->assignmentFive->hide();
+        ui->dateFive->hide();
         classCount--;
         break;
     }
@@ -141,14 +173,9 @@ void MainWindow::setTime()
     }
 }
 
-void MainWindow::on_previousButton_2_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(2);
-}
-
 void MainWindow::on_addNote5_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(1);
+    ui->stackedWidget->setCurrentIndex(0);
 }
 
 void MainWindow::on_addOne_clicked()
@@ -209,4 +236,9 @@ void MainWindow::on_addFive_clicked()
         full += "*" + list5.at(i) + "\nDate: " + list5.at(i+1) + "\n";
     }
     ui->class5Note1->setText(full);
+}
+
+void MainWindow::on_toPage3_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
 }

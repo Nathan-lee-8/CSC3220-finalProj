@@ -31,8 +31,6 @@ private slots:
 
     void setTime();
 
-    void on_previousButton_2_clicked();
-
     void on_addNote5_clicked();
 
     void on_addOne_clicked();
@@ -45,6 +43,8 @@ private slots:
     void on_addFour_clicked();
 
     void on_addFive_clicked();
+
+    void on_toPage3_clicked();
 
 private:
     QStringList list1;
