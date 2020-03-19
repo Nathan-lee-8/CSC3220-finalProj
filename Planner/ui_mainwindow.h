@@ -20,7 +20,6 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QTabWidget>
 #include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
@@ -60,30 +59,32 @@ public:
     QLabel *otherDots;
     QPushButton *previousButton_2;
     QWidget *tableView;
-    QTabWidget *tabWidget;
-    QWidget *byDueDate;
-    QWidget *byClass;
-    QTextBrowser *classOneLabel;
-    QTextBrowser *classTwoLabel;
-    QTextBrowser *classThreeLabel;
-    QTextBrowser *classFiveLabel;
-    QTextBrowser *classFourLabel;
+    QPushButton *addFive;
+    QLabel *classFourLabel;
+    QTextBrowser *class4Note1;
+    QPushButton *addThree;
+    QTextEdit *dateThree;
+    QLabel *classThreeLabel;
+    QLabel *classFiveLabel;
+    QPushButton *addTwo;
+    QTextBrowser *class1Note1;
+    QTextEdit *assignmentTwo;
+    QTextEdit *dateTwo;
+    QTextBrowser *class5Note1;
+    QTextEdit *dateOne;
+    QTextBrowser *class2Note1;
+    QTextEdit *assignmentFour;
+    QLabel *classOneLabel;
+    QTextEdit *assignmentThree;
     QPushButton *addNote5;
-    QTextEdit *class1Note1;
-    QTextEdit *class2Note1;
-    QTextEdit *class3Note1;
-    QTextEdit *class4Note1;
-    QTextEdit *class5Note1;
-    QTextEdit *class1Note2;
-    QTextEdit *class5Note2;
-    QTextEdit *class4Note2;
-    QTextEdit *class2Note2;
-    QTextEdit *class3Note2;
-    QTextEdit *class1Note3;
-    QTextEdit *class2Note3;
-    QTextEdit *class3Note3;
-    QTextEdit *class4Note3;
-    QTextEdit *class5Note3;
+    QTextEdit *assignmentOne;
+    QTextEdit *assignmentFive;
+    QLabel *classTwoLabel;
+    QTextEdit *dateFour;
+    QPushButton *addFour;
+    QPushButton *addOne;
+    QTextBrowser *class3Note1;
+    QTextEdit *dateFive;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -91,7 +92,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(863, 606);
+        MainWindow->resize(858, 599);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         stackedWidget = new QStackedWidget(centralwidget);
@@ -205,83 +206,89 @@ public:
         stackedWidget->addWidget(calendarView);
         tableView = new QWidget();
         tableView->setObjectName(QString::fromUtf8("tableView"));
-        tabWidget = new QTabWidget(tableView);
-        tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
-        tabWidget->setGeometry(QRect(0, 0, 841, 521));
-        byDueDate = new QWidget();
-        byDueDate->setObjectName(QString::fromUtf8("byDueDate"));
-        tabWidget->addTab(byDueDate, QString());
-        byClass = new QWidget();
-        byClass->setObjectName(QString::fromUtf8("byClass"));
-        classOneLabel = new QTextBrowser(byClass);
-        classOneLabel->setObjectName(QString::fromUtf8("classOneLabel"));
-        classOneLabel->setGeometry(QRect(10, 80, 151, 41));
-        classTwoLabel = new QTextBrowser(byClass);
-        classTwoLabel->setObjectName(QString::fromUtf8("classTwoLabel"));
-        classTwoLabel->setGeometry(QRect(180, 80, 151, 41));
-        classThreeLabel = new QTextBrowser(byClass);
-        classThreeLabel->setObjectName(QString::fromUtf8("classThreeLabel"));
-        classThreeLabel->setGeometry(QRect(350, 80, 151, 41));
-        classFiveLabel = new QTextBrowser(byClass);
-        classFiveLabel->setObjectName(QString::fromUtf8("classFiveLabel"));
-        classFiveLabel->setGeometry(QRect(680, 80, 151, 41));
-        classFourLabel = new QTextBrowser(byClass);
+        addFive = new QPushButton(tableView);
+        addFive->setObjectName(QString::fromUtf8("addFive"));
+        addFive->setGeometry(QRect(790, 90, 31, 28));
+        classFourLabel = new QLabel(tableView);
         classFourLabel->setObjectName(QString::fromUtf8("classFourLabel"));
-        classFourLabel->setGeometry(QRect(520, 80, 151, 41));
-        addNote5 = new QPushButton(byClass);
-        addNote5->setObjectName(QString::fromUtf8("addNote5"));
-        addNote5->setGeometry(QRect(710, 430, 93, 28));
-        class1Note1 = new QTextEdit(byClass);
-        class1Note1->setObjectName(QString::fromUtf8("class1Note1"));
-        class1Note1->setGeometry(QRect(10, 130, 151, 91));
-        class2Note1 = new QTextEdit(byClass);
-        class2Note1->setObjectName(QString::fromUtf8("class2Note1"));
-        class2Note1->setGeometry(QRect(180, 130, 151, 91));
-        class3Note1 = new QTextEdit(byClass);
-        class3Note1->setObjectName(QString::fromUtf8("class3Note1"));
-        class3Note1->setGeometry(QRect(350, 130, 151, 91));
-        class4Note1 = new QTextEdit(byClass);
+        classFourLabel->setGeometry(QRect(520, 10, 131, 41));
+        class4Note1 = new QTextBrowser(tableView);
         class4Note1->setObjectName(QString::fromUtf8("class4Note1"));
-        class4Note1->setGeometry(QRect(520, 130, 151, 91));
-        class5Note1 = new QTextEdit(byClass);
+        class4Note1->setGeometry(QRect(510, 130, 151, 351));
+        addThree = new QPushButton(tableView);
+        addThree->setObjectName(QString::fromUtf8("addThree"));
+        addThree->setGeometry(QRect(460, 90, 31, 28));
+        dateThree = new QTextEdit(tableView);
+        dateThree->setObjectName(QString::fromUtf8("dateThree"));
+        dateThree->setGeometry(QRect(340, 90, 111, 31));
+        classThreeLabel = new QLabel(tableView);
+        classThreeLabel->setObjectName(QString::fromUtf8("classThreeLabel"));
+        classThreeLabel->setGeometry(QRect(350, 10, 131, 41));
+        classFiveLabel = new QLabel(tableView);
+        classFiveLabel->setObjectName(QString::fromUtf8("classFiveLabel"));
+        classFiveLabel->setGeometry(QRect(680, 10, 131, 41));
+        addTwo = new QPushButton(tableView);
+        addTwo->setObjectName(QString::fromUtf8("addTwo"));
+        addTwo->setGeometry(QRect(290, 90, 31, 28));
+        class1Note1 = new QTextBrowser(tableView);
+        class1Note1->setObjectName(QString::fromUtf8("class1Note1"));
+        class1Note1->setGeometry(QRect(0, 130, 151, 351));
+        assignmentTwo = new QTextEdit(tableView);
+        assignmentTwo->setObjectName(QString::fromUtf8("assignmentTwo"));
+        assignmentTwo->setGeometry(QRect(170, 50, 151, 31));
+        dateTwo = new QTextEdit(tableView);
+        dateTwo->setObjectName(QString::fromUtf8("dateTwo"));
+        dateTwo->setGeometry(QRect(170, 90, 111, 31));
+        class5Note1 = new QTextBrowser(tableView);
         class5Note1->setObjectName(QString::fromUtf8("class5Note1"));
-        class5Note1->setGeometry(QRect(680, 130, 151, 91));
-        class1Note2 = new QTextEdit(byClass);
-        class1Note2->setObjectName(QString::fromUtf8("class1Note2"));
-        class1Note2->setGeometry(QRect(10, 230, 151, 91));
-        class5Note2 = new QTextEdit(byClass);
-        class5Note2->setObjectName(QString::fromUtf8("class5Note2"));
-        class5Note2->setGeometry(QRect(680, 230, 151, 91));
-        class4Note2 = new QTextEdit(byClass);
-        class4Note2->setObjectName(QString::fromUtf8("class4Note2"));
-        class4Note2->setGeometry(QRect(520, 230, 151, 91));
-        class2Note2 = new QTextEdit(byClass);
-        class2Note2->setObjectName(QString::fromUtf8("class2Note2"));
-        class2Note2->setGeometry(QRect(180, 230, 151, 91));
-        class3Note2 = new QTextEdit(byClass);
-        class3Note2->setObjectName(QString::fromUtf8("class3Note2"));
-        class3Note2->setGeometry(QRect(350, 230, 151, 91));
-        class1Note3 = new QTextEdit(byClass);
-        class1Note3->setObjectName(QString::fromUtf8("class1Note3"));
-        class1Note3->setGeometry(QRect(10, 330, 151, 91));
-        class2Note3 = new QTextEdit(byClass);
-        class2Note3->setObjectName(QString::fromUtf8("class2Note3"));
-        class2Note3->setGeometry(QRect(180, 330, 151, 91));
-        class3Note3 = new QTextEdit(byClass);
-        class3Note3->setObjectName(QString::fromUtf8("class3Note3"));
-        class3Note3->setGeometry(QRect(350, 330, 151, 91));
-        class4Note3 = new QTextEdit(byClass);
-        class4Note3->setObjectName(QString::fromUtf8("class4Note3"));
-        class4Note3->setGeometry(QRect(520, 330, 151, 91));
-        class5Note3 = new QTextEdit(byClass);
-        class5Note3->setObjectName(QString::fromUtf8("class5Note3"));
-        class5Note3->setGeometry(QRect(680, 330, 151, 91));
-        tabWidget->addTab(byClass, QString());
+        class5Note1->setGeometry(QRect(670, 130, 151, 351));
+        dateOne = new QTextEdit(tableView);
+        dateOne->setObjectName(QString::fromUtf8("dateOne"));
+        dateOne->setGeometry(QRect(0, 90, 111, 31));
+        class2Note1 = new QTextBrowser(tableView);
+        class2Note1->setObjectName(QString::fromUtf8("class2Note1"));
+        class2Note1->setGeometry(QRect(170, 130, 151, 351));
+        assignmentFour = new QTextEdit(tableView);
+        assignmentFour->setObjectName(QString::fromUtf8("assignmentFour"));
+        assignmentFour->setGeometry(QRect(510, 50, 151, 31));
+        classOneLabel = new QLabel(tableView);
+        classOneLabel->setObjectName(QString::fromUtf8("classOneLabel"));
+        classOneLabel->setGeometry(QRect(10, 10, 131, 41));
+        assignmentThree = new QTextEdit(tableView);
+        assignmentThree->setObjectName(QString::fromUtf8("assignmentThree"));
+        assignmentThree->setGeometry(QRect(340, 50, 151, 31));
+        addNote5 = new QPushButton(tableView);
+        addNote5->setObjectName(QString::fromUtf8("addNote5"));
+        addNote5->setGeometry(QRect(698, 495, 93, 28));
+        assignmentOne = new QTextEdit(tableView);
+        assignmentOne->setObjectName(QString::fromUtf8("assignmentOne"));
+        assignmentOne->setGeometry(QRect(0, 50, 151, 31));
+        assignmentFive = new QTextEdit(tableView);
+        assignmentFive->setObjectName(QString::fromUtf8("assignmentFive"));
+        assignmentFive->setGeometry(QRect(670, 50, 151, 31));
+        classTwoLabel = new QLabel(tableView);
+        classTwoLabel->setObjectName(QString::fromUtf8("classTwoLabel"));
+        classTwoLabel->setGeometry(QRect(200, 10, 131, 41));
+        dateFour = new QTextEdit(tableView);
+        dateFour->setObjectName(QString::fromUtf8("dateFour"));
+        dateFour->setGeometry(QRect(510, 90, 111, 31));
+        addFour = new QPushButton(tableView);
+        addFour->setObjectName(QString::fromUtf8("addFour"));
+        addFour->setGeometry(QRect(630, 90, 31, 28));
+        addOne = new QPushButton(tableView);
+        addOne->setObjectName(QString::fromUtf8("addOne"));
+        addOne->setGeometry(QRect(120, 90, 31, 28));
+        class3Note1 = new QTextBrowser(tableView);
+        class3Note1->setObjectName(QString::fromUtf8("class3Note1"));
+        class3Note1->setGeometry(QRect(340, 130, 151, 351));
+        dateFive = new QTextEdit(tableView);
+        dateFive->setObjectName(QString::fromUtf8("dateFive"));
+        dateFive->setGeometry(QRect(670, 90, 111, 31));
         stackedWidget->addWidget(tableView);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 863, 26));
+        menubar->setGeometry(QRect(0, 0, 858, 26));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -290,7 +297,6 @@ public:
         retranslateUi(MainWindow);
 
         stackedWidget->setCurrentIndex(2);
-        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -314,9 +320,77 @@ public:
         dots->setText(QApplication::translate("MainWindow", ":", nullptr));
         otherDots->setText(QApplication::translate("MainWindow", ":", nullptr));
         previousButton_2->setText(QApplication::translate("MainWindow", "Next", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(byDueDate), QApplication::translate("MainWindow", "Due Date", nullptr));
+        addFive->setText(QApplication::translate("MainWindow", "Add", nullptr));
+        classFourLabel->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
+        addThree->setText(QApplication::translate("MainWindow", "Add", nullptr));
+        dateThree->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2';\">Date</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2';\"><br /></p></body></html>", nullptr));
+        classThreeLabel->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
+        classFiveLabel->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
+        addTwo->setText(QApplication::translate("MainWindow", "Add", nullptr));
+        assignmentTwo->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2';\">Add assignment here</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2';\"><br /></p></body></html>", nullptr));
+        dateTwo->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2';\">Date</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2';\"><br /></p></body></html>", nullptr));
+        dateOne->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2';\">Date</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2';\"><br /></p></body></html>", nullptr));
+        assignmentFour->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2';\">Add assignment here</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2';\"><br /></p></body></html>", nullptr));
+        classOneLabel->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
+        assignmentThree->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2';\">Add assignment here</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2';\"><br /></p></body></html>", nullptr));
         addNote5->setText(QApplication::translate("MainWindow", "Back", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(byClass), QApplication::translate("MainWindow", "Class", nullptr));
+        assignmentOne->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2';\">Add assignment here</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2';\"><br /></p></body></html>", nullptr));
+        assignmentFive->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2';\">Add assignment here</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2';\"><br /></p></body></html>", nullptr));
+        classTwoLabel->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
+        dateFour->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2';\">Date</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2';\"><br /></p></body></html>", nullptr));
+        addFour->setText(QApplication::translate("MainWindow", "Add", nullptr));
+        addOne->setText(QApplication::translate("MainWindow", "Add", nullptr));
+        dateFive->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'MS Shell Dlg 2';\">Date</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2';\"><br /></p></body></html>", nullptr));
     } // retranslateUi
 
 };

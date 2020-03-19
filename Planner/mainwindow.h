@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QTime>
 #include <QTimer>
+#include <QLinkedList>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -34,7 +35,11 @@ private slots:
 
     void on_addNote5_clicked();
 
+    void on_addOne_clicked();
+
+
 private:
+    QLinkedList<QString> list;
     Ui::MainWindow *ui;
     QTimer *timer;
     unsigned int classCount = 3;
