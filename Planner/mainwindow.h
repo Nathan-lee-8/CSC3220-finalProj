@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QTime>
+#include <QTimer>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -26,8 +28,11 @@ private slots:
 
     void on_removeClassButton_clicked();
 
+    void setTime();
+
 private:
     Ui::MainWindow *ui;
+    QTimer *timer;
     unsigned int classCount = 3;
 };
 #endif // MAINWINDOW_H

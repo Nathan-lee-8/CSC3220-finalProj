@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QCalendarWidget>
+#include <QtWidgets/QLCDNumber>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
@@ -51,6 +52,11 @@ public:
     QCalendarWidget *calendarWidget;
     QLineEdit *dateLabel;
     QPushButton *previousButton;
+    QLCDNumber *hourValue;
+    QLCDNumber *secondValue;
+    QLCDNumber *minuteValue;
+    QLabel *dots;
+    QLabel *otherDots;
     QWidget *tableView;
     QTabWidget *tabWidget;
     QWidget *byDueDate;
@@ -65,7 +71,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(863, 605);
+        MainWindow->resize(863, 606);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         stackedWidget = new QStackedWidget(centralwidget);
@@ -139,6 +145,40 @@ public:
         previousButton = new QPushButton(calendarView);
         previousButton->setObjectName(QString::fromUtf8("previousButton"));
         previousButton->setGeometry(QRect(670, 330, 113, 32));
+        hourValue = new QLCDNumber(calendarView);
+        hourValue->setObjectName(QString::fromUtf8("hourValue"));
+        hourValue->setGeometry(QRect(640, 460, 50, 50));
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("Lato"));
+        font1.setPointSize(11);
+        hourValue->setFont(font1);
+        hourValue->setDigitCount(2);
+        hourValue->setProperty("value", QVariant(22.000000000000000));
+        hourValue->setProperty("intValue", QVariant(22));
+        secondValue = new QLCDNumber(calendarView);
+        secondValue->setObjectName(QString::fromUtf8("secondValue"));
+        secondValue->setGeometry(QRect(760, 460, 50, 50));
+        secondValue->setFont(font1);
+        secondValue->setDigitCount(2);
+        secondValue->setProperty("value", QVariant(22.000000000000000));
+        secondValue->setProperty("intValue", QVariant(22));
+        minuteValue = new QLCDNumber(calendarView);
+        minuteValue->setObjectName(QString::fromUtf8("minuteValue"));
+        minuteValue->setGeometry(QRect(700, 460, 50, 50));
+        minuteValue->setFont(font1);
+        minuteValue->setDigitCount(2);
+        minuteValue->setProperty("value", QVariant(22.000000000000000));
+        minuteValue->setProperty("intValue", QVariant(22));
+        dots = new QLabel(calendarView);
+        dots->setObjectName(QString::fromUtf8("dots"));
+        dots->setGeometry(QRect(690, 460, 56, 41));
+        QFont font2;
+        font2.setPointSize(16);
+        dots->setFont(font2);
+        otherDots = new QLabel(calendarView);
+        otherDots->setObjectName(QString::fromUtf8("otherDots"));
+        otherDots->setGeometry(QRect(750, 460, 56, 41));
+        otherDots->setFont(font2);
         stackedWidget->addWidget(calendarView);
         tableView = new QWidget();
         tableView->setObjectName(QString::fromUtf8("tableView"));
@@ -173,7 +213,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(1);
         tabWidget->setCurrentIndex(1);
 
 
@@ -195,6 +235,8 @@ public:
         course5Label->setText(QApplication::translate("MainWindow", "Course 5:", nullptr));
         removeClassButton->setText(QApplication::translate("MainWindow", "Remove Class", nullptr));
         previousButton->setText(QApplication::translate("MainWindow", "Prev", nullptr));
+        dots->setText(QApplication::translate("MainWindow", ":", nullptr));
+        otherDots->setText(QApplication::translate("MainWindow", ":", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(byDueDate), QApplication::translate("MainWindow", "Due Date", nullptr));
         classTwoLabel->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
