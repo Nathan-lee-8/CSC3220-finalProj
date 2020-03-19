@@ -27,3 +27,4 @@ void MainWindow::on_previousButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(0);
 }
+

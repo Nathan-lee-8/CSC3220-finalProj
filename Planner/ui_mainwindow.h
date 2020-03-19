@@ -12,12 +12,15 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QCalendarWidget>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
+#include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
 
@@ -28,9 +31,16 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QStackedWidget *stackedWidget;
+    QWidget *homePage;
+    QPushButton *nextButton;
+    QTextEdit *textEdit;
+    QLabel *greetingLabel;
+    QLabel *label;
+    QTextBrowser *textBrowser;
     QWidget *calendarView;
     QCalendarWidget *calendarWidget;
     QLineEdit *dateLabel;
+    QPushButton *previousButton;
     QWidget *tableView;
     QTabWidget *tabWidget;
     QWidget *byDueDate;
@@ -51,6 +61,27 @@ public:
         stackedWidget = new QStackedWidget(centralwidget);
         stackedWidget->setObjectName(QString::fromUtf8("stackedWidget"));
         stackedWidget->setGeometry(QRect(0, 10, 841, 521));
+        homePage = new QWidget();
+        homePage->setObjectName(QString::fromUtf8("homePage"));
+        nextButton = new QPushButton(homePage);
+        nextButton->setObjectName(QString::fromUtf8("nextButton"));
+        nextButton->setGeometry(QRect(612, 451, 161, 41));
+        textEdit = new QTextEdit(homePage);
+        textEdit->setObjectName(QString::fromUtf8("textEdit"));
+        textEdit->setGeometry(QRect(160, 80, 521, 74));
+        greetingLabel = new QLabel(homePage);
+        greetingLabel->setObjectName(QString::fromUtf8("greetingLabel"));
+        greetingLabel->setGeometry(QRect(280, 10, 311, 81));
+        QFont font;
+        font.setPointSize(18);
+        greetingLabel->setFont(font);
+        label = new QLabel(homePage);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(150, 210, 461, 101));
+        textBrowser = new QTextBrowser(homePage);
+        textBrowser->setObjectName(QString::fromUtf8("textBrowser"));
+        textBrowser->setGeometry(QRect(180, 290, 256, 192));
+        stackedWidget->addWidget(homePage);
         calendarView = new QWidget();
         calendarView->setObjectName(QString::fromUtf8("calendarView"));
         calendarWidget = new QCalendarWidget(calendarView);
@@ -59,10 +90,11 @@ public:
         dateLabel = new QLineEdit(calendarView);
         dateLabel->setObjectName(QString::fromUtf8("dateLabel"));
         dateLabel->setGeometry(QRect(630, 20, 201, 41));
-        QFont font;
-        font.setPointSize(18);
         dateLabel->setFont(font);
         dateLabel->setAlignment(Qt::AlignCenter);
+        previousButton = new QPushButton(calendarView);
+        previousButton->setObjectName(QString::fromUtf8("previousButton"));
+        previousButton->setGeometry(QRect(670, 330, 113, 32));
         stackedWidget->addWidget(calendarView);
         tableView = new QWidget();
         tableView->setObjectName(QString::fromUtf8("tableView"));
@@ -97,7 +129,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(1);
         tabWidget->setCurrentIndex(1);
 
 
@@ -107,6 +139,15 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
+        nextButton->setText(QApplication::translate("MainWindow", "Next", nullptr));
+        textEdit->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'.SF NS Text'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'.SF NS Text';\">This application is for students by students. Our goal is to create a well-organized planner/calendar application that will satisfy the needs of students and allow for more consolidated information storage. </span></p></body></html>", nullptr));
+        greetingLabel->setText(QApplication::translate("MainWindow", "Welcome to Our Planner Application!", nullptr));
+        label->setText(QApplication::translate("MainWindow", "This application is for students by students. Our goal is to create a well-organized planner/calendar application that will satisfy the needs of students and allow for more consolidated information storage. ", nullptr));
+        previousButton->setText(QApplication::translate("MainWindow", "Prev", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(byDueDate), QApplication::translate("MainWindow", "Due Date", nullptr));
         classTwoLabel->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"

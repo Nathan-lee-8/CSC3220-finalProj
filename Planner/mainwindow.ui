@@ -17,15 +17,169 @@
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>10</x>
       <y>10</y>
       <width>841</width>
       <height>521</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
+    <widget class="QWidget" name="homePage">
+     <widget class="QPushButton" name="nextButton">
+      <property name="geometry">
+       <rect>
+        <x>612</x>
+        <y>451</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Next</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="greetingLabel">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>10</y>
+        <width>311</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Welcome to Our Planner Application!</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="infoLabel">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>70</y>
+        <width>531</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;This application is for students by students. Our goal is to create a well-&lt;br/&gt;organized planner/calendar application that will satisfy the needs of students&lt;br/&gt;and allow for more consolidated information storage. &lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Please enter the appropriate infromation below to get started.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>200</y>
+        <width>401</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Please enter the name of your courses:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="courseOne">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>240</y>
+        <width>141</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="course1Label">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>240</y>
+        <width>101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Course 1:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="course2Label">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>280</y>
+        <width>101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Course 2:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="course3Label">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>320</y>
+        <width>101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Course 3:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="courseTwo">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>280</y>
+        <width>141</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="courseThree">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>320</y>
+        <width>141</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="course4Label">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>360</y>
+        <width>101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Course 4:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="courseFour">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>360</y>
+        <width>141</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
     <widget class="QWidget" name="calendarView">
      <widget class="QCalendarWidget" name="calendarWidget">
       <property name="geometry">
@@ -53,6 +207,19 @@
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="previousButton">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>330</y>
+        <width>113</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Prev</string>
       </property>
      </widget>
     </widget>

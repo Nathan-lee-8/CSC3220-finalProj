@@ -20,6 +20,8 @@ private slots:
 
     void on_previousButton_clicked();
 
+    void on_numClasses_valueChanged(const QString &arg1);
+    
 private:
     Ui::MainWindow *ui;
 };
