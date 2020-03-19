@@ -35,7 +35,6 @@ private slots:
 
     void on_addOne_clicked();
 
-
     void on_addTwo_clicked();
 
     void on_addThree_clicked();

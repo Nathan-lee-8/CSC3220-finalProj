@@ -38,7 +38,44 @@ MainWindow::~MainWindow()
 void MainWindow::on_calendarWidget_clicked(const QDate &date)
 {
     qDebug() << date;
-    ui->dateLabel->setText(date.toString());
+    QString newDate = date.toString();
+    ui->dateLabel->setText(newDate);
+    QString string;
+    for(int i = 0; i < list1.length(); i++){
+        if(newDate.contains(list1.at(i))){
+            string += list1.at(i - 1);
+            string += "\n";
+            ui->calendarList->setText(string);
+        }
+    }
+    for(int i = 0; i < list2.length(); i++){
+        if(newDate.contains(list2.at(i))){
+            string += list2.at(i - 1);
+            string += "\n";
+            ui->calendarList->setText(string);
+        }
+    }
+    for(int i = 0; i < list3.length(); i++){
+        if(newDate.contains(list3.at(i))){
+            string += list3.at(i - 1);
+            string += "\n";
+            ui->calendarList->setText(string);
+        }
+    }
+    for(int i = 0; i < list4.length(); i++){
+        if(newDate.contains(list4.at(i))){
+            string += list4.at(i - 1);
+            string += "\n";
+            ui->calendarList->setText(string);
+        }
+    }
+    for(int i = 0; i < list5.length(); i++){
+        if(newDate.contains(list5.at(i))){
+            string += list5.at(i - 1);
+            string += "\n";
+            ui->calendarList->setText(string);
+        }
+    }
 }
 
 void MainWindow::on_previousButton_clicked()
